@@ -1,11 +1,29 @@
 #cal-container{
     background-color: blueviolet;
     width: 350px;
-    height: 200px;
+    height: 250px;
+    /* display: flex;
+    justify-content: center; */
 
   
 }
-.btn{
+.btn,
+.operators-Btn{
     padding: 15px;
     font-size: 20px;
+}
+.btn:hover{
+    background-color: rgb(41, 57, 131);
+    color: aliceblue;
+}
+#displayContent{
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+    background-color:rgb(211, 183, 236);
+    width: 330px;
+    height: 50px;
+    padding: 10px;
+    text-align: end;
+    font-size: 30px;
 }

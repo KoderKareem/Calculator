@@ -4,30 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
     <div id="cal-container">
-        <div id="displayContent"></div>
-      
-      <button class="btn" id="zero">0</button>
-      <button class="btn" id="one">1</button>
-      <button class="btn" id="two">2</button>
-      <button class="btn" id="three">3</button>
-      <button class="btn" id="four">4</button>
-      <button class="btn" id="five">5</button>
-      <button class="btn" id="six">6</button>
-      <button class="btn" id="seven">7</button>
-      <button class="btn" id="eight">8</button>
-      <button class="btn" id="nine">9</button>
-      <button class="operators-Btn" id="addition">+</button>
-      <button class="operators-Btn" id="subtraction">-</button>
-      <button class="operators-Btn" id="multiplication">*</button>
-      <button class="operators-Btn" id="division">/</button>
-      <button class="btn" id="equal">=</button>
+      <div id="displayContent"></div>
+      <div class="clicks">
+        <div class="numbers">
+          <button class="btn" id="number" id="zero">0</button>
+          <button class="btn" id="number" id="one">1</button>
+          <button class="btn" id="number" id="two">2</button>
+          <button class="btn" id="number" id="three">3</button>
+          <button class="btn" id="number" id="four">4</button>
+          <button class="btn" id="number" id="five">5</button>
+          <button class="btn" id="number" id="six">6</button>
+          <button class="btn" id="number" id="seven">7</button>
+          <button class="btn" id="number" id="eight">8</button>
+          <button class="btn" id="number" id="nine">9</button>
+        </div>
+        <div class="operators">
+          <button class="operators-Btn" id="operator" id="addition">+</button>
+          <button class="operators-Btn" id="operator" id="subtraction">-</button>
+          <button class="operators-Btn" id="operator" id="multiplication">*</button>
+          <button class="operators-Btn" id="operator" id="division">/</button>
+          <button class="btn" id="equal">=</button>
+        </div>
+      </div>
+      <div class="delete">
       <button class="btn" id="clear">Clear</button>
-
+      <button class="btn" id="backSpace">Back Space</button>
+    </div>
     </div>
   </body>
 </html>

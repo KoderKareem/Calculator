@@ -1,29 +1,84 @@
-#cal-container{
-    background-color: blueviolet;
-    width: 350px;
-    height: 250px;
-    /* display: flex;
-    justify-content: center; */
-
+#cal-container {
+  margin: 40px auto;
+  background-color: rgb(230, 20, 202);
+  width: 350px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  border:  solid  blueviolet 5px
+}
+.clicks {
+  display: flex;
+  justify-content: center;
+  order: 1;
+  flex-wrap: wrap;
+}
+/* #number{
+    order: 1;
+} */
+.numbers {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 200px;
+  /* flex: 1; */
+  /* background-color: aqua; */
+  
   
 }
+.operators {
+  /* width: 20px; */
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  /* background-color: blue; */
+  /* flex: 1; */
+  /* flex-basis: 100px; */
+}
+
+#number,
+#operator{
+    height: 55px;
+    width: 100px;
+   
+  /* flex: 1; */
+ 
+}
+button{
+  border-radius: 10px;
+  border-color: rgb(116, 6, 70);
+}
+#operator{
+  background-color: rgb(185, 30, 160);
+  color: aliceblue;
+  font-weight: 900;
+}
 .btn,
-.operators-Btn{
-    padding: 15px;
-    font-size: 20px;
+.operators-Btn {
+  padding: 15px;
+  font-size: 20px;
+  /* flex: 1; */
+  /* width: 55px; */
 }
-.btn:hover{
-    background-color: rgb(41, 57, 131);
-    color: aliceblue;
+.btn:hover,
+.operators-Btn:hover {
+  background-color: rgb(173, 10, 100);
+  color: aliceblue;
 }
-#displayContent{
-    display: flex;
-    justify-content: end;
-    gap: 15px;
-    background-color:rgb(211, 183, 236);
-    width: 330px;
-    height: 50px;
-    padding: 10px;
-    text-align: end;
-    font-size: 30px;
+#displayContent {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+  background-color: rgb(253, 161, 253);
+  width: 330px;
+  height: 50px;
+  padding: 10px;
+  text-align: end;
+  font-size: 30px;
 }

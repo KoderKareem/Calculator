@@ -17,7 +17,7 @@ let firstNum = "";
 let operator = "";
 let secondNum = "";
 let currentDiv = document.createElement("div");
-currentDiv.className = currentDiv
+currentDiv.className = currentDiv;
 let displayContent = document.querySelector("#displayContent");
 // Number buttons
 let numbers = document.querySelectorAll("#number");

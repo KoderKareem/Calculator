@@ -60,7 +60,7 @@ button {
   padding: 10px;
   text-align: end;
   font-size: 30px;
-  word-wrap:break-word;
+  word-wrap: break-word;
   word-break: break-all;
 }
 #equal {

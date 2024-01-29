@@ -2,60 +2,41 @@
   margin: 40px auto;
   background-color: rgb(230, 20, 202);
   width: 350px;
-  height: 450px;
+  height: auto;
   display: flex;
   align-items: center;
   /* justify-content: center; */
   flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
-  border:  solid  blueviolet 5px
+  border: solid blueviolet 5px;
 }
-.clicks {
-  display: flex;
-  justify-content: center;
-  order: 1;
-  flex-wrap: wrap;
-}
-/* #number{
-    order: 1;
-} */
-.numbers {
+
+.btn-container {
+  padding: 10px;
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
-  width: 200px;
-  /* flex: 1; */
-  /* background-color: aqua; */
-  
-  
+  width: 295px;
 }
 .operators {
-  /* width: 20px; */
   display: flex;
   align-items: stretch;
   flex-direction: column;
   flex-wrap: wrap;
-
-  /* background-color: blue; */
-  /* flex: 1; */
-  /* flex-basis: 100px; */
 }
 
 #number,
-#operator{
-    height: 55px;
-    width: 100px;
-   
-  /* flex: 1; */
- 
+#operator {
+  height: 55px;
+  width: 70px;
 }
-button{
+button {
   border-radius: 10px;
   border-color: rgb(116, 6, 70);
 }
-#operator{
-  background-color: rgb(185, 30, 160);
+#operator {
+  background-color: rgb(175, 16, 149);
   color: aliceblue;
   font-weight: 900;
 }
@@ -63,12 +44,10 @@ button{
 .operators-Btn {
   padding: 15px;
   font-size: 20px;
-  /* flex: 1; */
-  /* width: 55px; */
 }
 .btn:hover,
 .operators-Btn:hover {
-  background-color: rgb(173, 10, 100);
+  background-color: rgb(214, 34, 133);
   color: aliceblue;
 }
 #displayContent {
@@ -77,8 +56,23 @@ button{
   gap: 15px;
   background-color: rgb(253, 161, 253);
   width: 330px;
-  height: 50px;
+  min-height: 50px;
   padding: 10px;
   text-align: end;
   font-size: 30px;
+  word-wrap:break-word;
+  word-break: break-all;
+}
+#equal {
+  flex-grow: 1;
+  width: 70px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+#clear,
+#backSpace {
+  flex-grow: 1;
 }

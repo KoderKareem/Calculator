@@ -17,8 +17,8 @@ let firstNum = "";
 let operator = "";
 let secondNum = "";
 let currentDiv = document.createElement("div");
+currentDiv.className = currentDiv
 let displayContent = document.querySelector("#displayContent");
-
 // Number buttons
 let numbers = document.querySelectorAll("#number");
 numbers.forEach((number) => {
@@ -33,7 +33,9 @@ function updateNumber(e) {
 let body = document.querySelector("body");
 
 // body.forEach((number) => {
-body.addEventListener("keydown", (ev) => {
+body.addEventListener("keydown", updateNumberKeyBoard);
+
+function updateNumberKeyBoard(ev) {
   switch (ev.key) {
     case "1":
       currentNum = ev.key;
@@ -85,14 +87,103 @@ body.addEventListener("keydown", (ev) => {
       currentDiv.textContent += currentNum;
       displayContent.appendChild(currentDiv);
       break;
+    case "Backspace":
+      currentDiv.textContent = currentDiv.textContent.slice(0, -1);
+    case "Delete":
+      clearDisplay();
+      break;
+    case "+":
+      if (firstNum === "") {
+        // If no firstNum, set it to the current display content
+        firstNum = currentDiv.textContent;
+        operator = ev.key;
+        // currentDiv.textContent = operator;
+
+        // Reset the currentDiv for the second number
+        currentDiv.textContent = "";
+      } else {
+        // If firstNum is already set, perform the previous operation and update operator
+        secondNum = currentDiv.textContent;
+        performOperation();
+        operator = ev.key;
+        currentDiv.textContent = operator;
+        displayContent.appendChild(currentDiv);
+
+        // Reset the currentDiv for the new second number
+        currentDiv.textContent = "";
+      }
+      break;
+    case "-":
+      if (firstNum === "") {
+        // If no firstNum, set it to the current display content
+        firstNum = currentDiv.textContent;
+        operator = ev.key;
+        // currentDiv.textContent = operator;
+
+        // Reset the currentDiv for the second number
+        currentDiv.textContent = "";
+      } else {
+        // If firstNum is already set, perform the previous operation and update operator
+        secondNum = currentDiv.textContent;
+        performOperation();
+        operator = ev.key;
+        currentDiv.textContent = operator;
+        displayContent.appendChild(currentDiv);
+
+        // Reset the currentDiv for the new second number
+        currentDiv.textContent = "";
+      }
+      break;
+    case "*":
+      if (firstNum === "") {
+        // If no firstNum, set it to the current display content
+        firstNum = currentDiv.textContent;
+        operator = ev.key;
+        // currentDiv.textContent = operator;
+
+        // Reset the currentDiv for the second number
+        currentDiv.textContent = "";
+      } else {
+        // If firstNum is already set, perform the previous operation and update operator
+        secondNum = currentDiv.textContent;
+        performOperation();
+        operator = ev.key;
+        currentDiv.textContent = operator;
+        displayContent.appendChild(currentDiv);
+
+        // Reset the currentDiv for the new second number
+        currentDiv.textContent = "";
+      }
+      break;
+    case "/":
+      if (firstNum === "") {
+        // If no firstNum, set it to the current display content
+        firstNum = currentDiv.textContent;
+        operator = ev.key;
+        // currentDiv.textContent = operator;
+
+        // Reset the currentDiv for the second number
+        currentDiv.textContent = "";
+      } else {
+        // If firstNum is already set, perform the previous operation and update operator
+        secondNum = currentDiv.textContent;
+        performOperation();
+        operator = ev.key;
+        currentDiv.textContent = operator;
+        displayContent.appendChild(currentDiv);
+
+        // Reset the currentDiv for the new second number
+        currentDiv.textContent = "";
+      }
+      break;
+    case "Enter":
+      performOperation();
     default:
       break;
   }
-});
-// });111
-// function updateNumberKeyBoard(ev){
-
-// }
+  console.log(ev.key);
+}
+function handleOperatorOnkeboard() {}
 // Operator buttons
 const operators = document.querySelectorAll("#operator");
 operators.forEach((op) => {
@@ -120,7 +211,6 @@ function handleOperator(e) {
     currentDiv.textContent = "";
   }
 }
-
 // Equal button
 const equalBtn = document.querySelector("#equal");
 equalBtn.addEventListener("click", performOperation);
